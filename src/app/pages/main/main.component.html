@@ -21,7 +21,7 @@
           <div class="workout-bg" [style.background-image]="'url(' + workout.image + ')'"></div>
           
           <div class="workout-content">
-            <a [routerLink]="['/workout', workout.id]" *ngFor="let workout of workouts" class="card">
+            <a [routerLink]="['/workout', workout.id]" class="card-detail">
                 <h4>{{ workout.name }}</h4>
                 <p>Week 1 | {{ workout.duration }} min</p>
             </a>
@@ -65,10 +65,12 @@
   
       <div class="cards">
         <div *ngFor="let diet of diets" class="card">
-          <img [src]="diet.image" alt="{{ diet.name }}" />
-          <h4>{{ diet.name }}</h4>
-          <p>Week 1 | {{ diet.duration }} min</p>
-          <div *ngIf="diet.completed" class="status">✔ Completed!</div>
+            <a [routerLink]="['/diet', diet.id]">
+                <img [src]="diet.image" alt="{{ diet.name }}" />
+                <h4>{{ diet.name }}</h4>
+                <p>Week 1 | {{ diet.duration }} min</p>
+                <div *ngIf="diet.completed" class="status">✔ Completed!</div>
+              </a>
         </div>
       </div>
     </div>
@@ -79,7 +81,9 @@
       <span class="icon">🔍</span>
       <span class="icon">👥</span>
       <span class="icon">➕</span>
-      <img src="profile.png" class="profile-pic" />
+      <a routerLink="/profile">
+        <img src="profile.png" class="profile-pic" />
+      </a>
     </div>
   </div>
   

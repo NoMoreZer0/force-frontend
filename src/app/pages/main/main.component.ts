@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-main',
   standalone: true,
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, RouterModule]
 })
 export class MainComponent {
   activeTab: string = 'workouts';
@@ -38,9 +39,9 @@ export class MainComponent {
 
     // Example data for diets
     this.diets = [
-      { name: 'Porridge', duration: '10', completed: true, image: 'porige.png' },
-      { name: 'Chicken', duration: '25', completed: true, image: 'chicken.png' },
-      { name: 'Broccoli Salad', duration: '5', completed: false, image: 'salad.png' },
+      { id: 1, name: 'Porridge', duration: '10', completed: true, image: 'porige.png' },
+      { id: 2, name: 'Chicken', duration: '25', completed: true, image: 'chicken.png' },
+      { id: 3, name: 'Broccoli Salad', duration: '5', completed: false, image: 'salad.png' },
     ];
 
     // Calculate progress

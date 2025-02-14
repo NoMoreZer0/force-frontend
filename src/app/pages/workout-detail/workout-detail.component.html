@@ -1,14 +1,14 @@
 <div *ngIf="workout" class="workout-detail">
-    <div class="header" [style.backgroundImage]="'url(' + workout.image + ')'">
+    <div class="header" [style.backgroundImage]="'url(' + workout?.image + ')'">
       <button class="back-btn">←</button>
-      <h1>{{ workout.name }}</h1>
-      <p>{{ workout.duration }}</p>
+      <h1>{{ workout?.name }}</h1>
+      <p>{{ workout?.duration }}</p>
     </div>
   
     <div class="stats">
       <div class="stat"><span>⭐</span> <p>Saved</p></div>
-      <div class="stat"><span>❤️</span> <p>{{ workout.likes | number }}</p></div>
-      <div class="stat"><span>💬</span> <p>{{ workout.comments }}</p></div>
+      <div class="stat"><span>❤️</span> <p>{{ workout?.likes }}</p></div>
+      <div class="stat"><span>💬</span> <p>{{ workout?.comments }}</p></div>
     </div>
   
     <h2>Exercises</h2>
@@ -22,6 +22,6 @@
       </div>
     </div>
   
-    <button class="begin-btn">Begin</button>
+    <button class="begin-btn" (click)="startWorkout()">Begin</button>
   </div>
   

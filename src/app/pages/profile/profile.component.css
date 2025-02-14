@@ -1,0 +1,58 @@
+.profile-container {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: #f9fafb;
+  }
+  
+  .user-info {
+    margin-bottom: 20px;
+  }
+  
+  .profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3B82F6;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #1f2937;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #6b7280;
+  }
+  
+  /* Cards Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3B82F6;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #374151;
+  }
+  

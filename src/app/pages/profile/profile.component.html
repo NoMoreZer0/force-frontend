@@ -1,0 +1,44 @@
+<div class="profile-container">
+    <!-- User Info -->
+    <div class="user-info">
+      <div class="profile-image">
+        <img src="profile.png" alt="Profile" />
+      </div>
+      <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+      <p>{{ user.email }}</p>
+    </div>
+  
+    <!-- Stats Cards -->
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Gender</h3>
+        <p>{{ user.gender || "Not specified" }}</p>
+      </div>
+      
+      <div class="card">
+        <h3>Age</h3>
+        <p>{{ user.age || "Not specified" }}</p>
+      </div>
+      
+      <div class="card">
+        <h3>Weight</h3>
+        <p>{{ user.weight || "Not specified" }} kg</p>
+      </div>
+  
+      <div class="card">
+        <h3>Height</h3>
+        <p>{{ user.height || "Not specified" }} cm</p>
+      </div>
+  
+      <div class="card">
+        <h3>Goal</h3>
+        <p>{{ user.goal || "Not specified" }}</p>
+      </div>
+  
+      <div class="card">
+        <h3>Level</h3>
+        <p>{{ user.level || "Not specified" }}</p>
+      </div>
+    </div>
+  </div>
+  

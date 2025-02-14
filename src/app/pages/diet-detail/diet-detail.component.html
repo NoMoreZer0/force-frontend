@@ -1,0 +1,34 @@
+<div class="diet-detail-container">
+    <!-- Diet Image -->
+    <div class="diet-image" [style.backgroundImage]="'url(' + diet?.image + ')'"></div>
+  
+    <!-- Title and Time -->
+    <div class="diet-header">
+      <h1>{{ diet?.name }}</h1>
+      <p>{{ diet?.duration }} min</p>
+    </div>
+  
+    <!-- Action Icons -->
+    <div class="diet-actions">
+      <div class="action"><span>⭐</span> Save</div>
+      <div class="action"><span>❤️</span> {{ diet?.likes }}</div>
+      <div class="action"><span>💬</span> {{ diet?.comments }}</div>
+    </div>
+  
+    <hr />
+  
+    <!-- Ingredients Section -->
+    <h2>Ingredients</h2>
+    <div class="ingredients">
+      <ul>
+        <li *ngFor="let ingredient of diet?.ingredients">
+          <strong>{{ ingredient.name }}</strong> - {{ ingredient.quantity }}
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Recipe Section -->
+    <h2>Recipe</h2>
+    <p>{{ diet?.recipe }}</p>
+  </div>
+  

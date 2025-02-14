@@ -11,6 +11,10 @@ import { ConfirmationComponent } from './pages/confirmation/confirmation.compone
 import { MainComponent } from './pages/main/main.component';
 import { AuthGuard } from './guards/app.guard';
 import { WorkoutDetailComponent } from './pages/workout-detail/workout-detail.component';
+import { ExerciseDetailComponent } from './pages/exercise-detail/exercise-detail.component';
+import { RestComponent } from './pages/rest/rest.component';
+import { DietDetailComponent } from './pages/diet-detail/diet-detail.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
   { path: 'main', component: MainComponent, canActivate: [AuthGuard] },
@@ -24,5 +28,9 @@ export const routes: Routes = [
   { path: 'select-level', component: SelectLevelComponent },
   { path: 'confirmation', component: ConfirmationComponent },
   { path: 'workout/:id', component: WorkoutDetailComponent },
+  { path: 'exercise-detail/:workoutId/:index', component: ExerciseDetailComponent },
+  { path: 'rest/:workoutId/:index', component: RestComponent },
+  { path: 'diet/:id', component: DietDetailComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '**', redirectTo: 'register' }
 ];
