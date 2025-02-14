@@ -1,7 +1,10 @@
 <div class="rest-container">
-    <h2>Rest</h2>
+  <a class="back-btn" href="javascript:history.back()">← </a>
     <h1>{{ restTime }}</h1>
-    <button (click)="addTime()">Add +10 sec</button>
-    <button (click)="skipRest()">Skip</button>
+    <div style="display: flex;">
+      <button (click)="addTime()">Add +10 sec</button>
+      <button (click)="toggleTimer()">Pause</button>
+      <button (click)="skipRest()">Skip</button>
+    </div>
   </div>
   

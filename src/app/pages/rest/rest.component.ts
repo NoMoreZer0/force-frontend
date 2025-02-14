@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-rest',
   templateUrl: './rest.component.html',
-  styleUrls: ['./rest.component.scss'],
+  styleUrls: ['./rest.component.css'],
 })
 export class RestComponent {
   restTime: number = 60;
@@ -25,6 +25,21 @@ export class RestComponent {
         this.skipRest();
       }
     }, 1000);
+  }
+
+  stopTime() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
+  }
+  
+  toggleTimer() {
+    if (this.interval) {
+      this.stopTime();
+    } else {
+      this.startRestTimer();
+    }
   }
 
   addTime() {

@@ -4,51 +4,64 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #93c5fd, #fff);
-  
-    p {
-      font-size: 16px;
-      color: #6b7280;
-      margin-bottom: 10px;
-    }
-  
-    img {
-      width: 60%;
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-  
-    h2 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #1f2937;
-      margin-bottom: 10px;
-    }
-  
-    h1 {
-      font-size: 48px;
-      font-weight: bold;
-      color: #111827;
-      margin-bottom: 20px;
-    }
-  
-    .next-btn {
-      padding: 12px 20px;
-      font-size: 18px;
-      font-weight: 600;
-      color: white;
-      background: #3b82f6;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-top: 10px;
-    }
-  
-    .next-btn:hover {
-      background: #2563eb;
-    }
+    background: linear-gradient(to bottom, #4282FF, #3177FF00);
+    position: relative;
   }
-  
+  p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 20px;
+  }
+
+  .next-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: #3b82f6;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+  }
+
+  .next-btn:hover {
+    background: #2563eb;
+  }
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .back-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+}

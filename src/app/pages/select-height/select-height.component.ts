@@ -47,7 +47,7 @@ export class SelectHeightComponent {
       }
 
       alert('Height selection saved!');
-      this.router.navigate(['/dashboard']); // Redirect to dashboard
+      this.router.navigate(['/select-goal']); // Redirect to dashboard
     }
   }
 

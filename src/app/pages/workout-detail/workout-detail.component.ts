@@ -23,4 +23,8 @@ export class WorkoutDetailComponent implements OnInit {
   startWorkout() {
     this.router.navigate(['/exercise-detail', this.workout?.id, 0]);
   }
+
+  backClick() {
+    this.router.navigate(['/main']);
+  }
 }

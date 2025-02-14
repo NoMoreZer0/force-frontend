@@ -20,35 +20,37 @@
           <!-- Workout Background -->
           <div class="workout-bg" [style.background-image]="'url(' + workout.image + ')'"></div>
           
-          <div class="workout-content">
-            <a [routerLink]="['/workout', workout.id]" class="card-detail">
+          <a [routerLink]="['/workout', workout.id]" class="workout-content">
+            <div [routerLink]="['/workout', workout.id]" class="card-detail">
                 <h4>{{ workout.name }}</h4>
                 <p>Week 1 | {{ workout.duration }} min</p>
-            </a>
+            </div>
               
 
             <!-- Completion & Progress -->
-            <div *ngIf="workout.completed" class="status">✔ Completed!</div>
-            <div *ngIf="!workout.completed && !workout.locked" class="progress">Progress: {{ workout.progress }}%</div>
-            <div *ngIf="workout.locked" class="locked-icon">🔒 Locked</div>
+            <div>
 
-            <!-- Progress Circle -->
-            <div class="progress-circle">
-              <svg width="50" height="50">
-                <circle cx="25" cy="25" r="20" stroke-width="5" stroke="#ddd" fill="none"/>
-                <circle cx="25" cy="25" r="20" stroke-width="5" 
-                        [attr.stroke-dasharray]="workout.progress + ',100'" stroke-linecap="round"
-                        stroke="#3B82F6" fill="none"/>
-              </svg>
-            </div>
+              <!-- Progress Circle -->
+              <div class="progress-circle">
+                <svg width="50" height="50">
+                  <circle cx="25" cy="25" r="20" stroke-width="5" stroke="#ddd" fill="none"/>
+                  <circle cx="25" cy="25" r="20" stroke-width="5" 
+                          [attr.stroke-dasharray]="workout.progress + ',100'" stroke-linecap="round"
+                          stroke="#3B82F6" fill="none"/>
+                </svg>
+              </div>
+              <div *ngIf="workout.completed" class="status">Completed!</div>
+              <div *ngIf="!workout.completed && !workout.locked" class="progress">Progress: {{ workout.progress }}%</div>
+              <div *ngIf="workout.locked" class="locked-icon">Locked</div>
 
-            <!-- Difficulty Stars -->
-            <div class="difficulty">
-              <span *ngFor="let star of [1,2,3,4,5]; let i = index">
-                <i class="fa" [class.fa-star]="i < workout.difficulty" [class.fa-star-o]="i >= workout.difficulty"></i>
-              </span>
+              <!-- Difficulty Stars -->
+              <div class="difficulty">
+                <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+                  <i class="fa" [class.fa-star]="i < workout.difficulty" [class.fa-star-o]="i >= workout.difficulty"></i>
+                </ng-container>
+              </div>              
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

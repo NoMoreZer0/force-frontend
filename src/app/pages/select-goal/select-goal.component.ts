@@ -44,7 +44,7 @@ export class SelectGoalComponent {
       }
 
       alert('Goal selection saved!');
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/select-level']);
     }
   }
 

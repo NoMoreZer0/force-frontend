@@ -36,10 +36,22 @@ export class SelectGenderComponent {
       localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
 
       alert('Gender selection saved!');
-      if (!this.registeredUsers[userIndex].age) {
-        this.router.navigate(['/select-age'])
+      if (!loggedInUser.gender) {
+        this.router.navigate(['/select-gender']);
+      } else if (!loggedInUser.age) {
+        this.router.navigate(['/select-age']);
+      } else if (!loggedInUser.weight) {
+        this.router.navigate(['/select-weight']);
+      } else if (!loggedInUser.height) {
+        this.router.navigate(['/select-height']);
+      } else if (!loggedInUser.goal) {
+        this.router.navigate(['/select-goal']);
+      } else if (!loggedInUser.level) {
+        this.router.navigate(['/select-level']);
+      } else if (!loggedInUser.confirmationPage) {
+        this.router.navigate(['/confirmation']);
       } else {
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/main']);
       }
     }
   }

@@ -6,7 +6,7 @@ import { WorkoutService } from '../../services/workout.service';
 @Component({
   selector: 'app-exercise-detail',
   templateUrl: './exercise-detail.component.html',
-  styleUrls: ['./exercise-detail.component.scss'],
+  styleUrls: ['./exercise-detail.component.css'],
 })
 export class ExerciseDetailComponent {
   workout!: Workout;

@@ -1,6 +1,6 @@
 <div *ngIf="workout" class="workout-detail">
     <div class="header" [style.backgroundImage]="'url(' + workout?.image + ')'">
-      <button class="back-btn">←</button>
+      <button (click)="backClick()" class="back-btn">←</button>
       <h1>{{ workout?.name }}</h1>
       <p>{{ workout?.duration }}</p>
     </div>

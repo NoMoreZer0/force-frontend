@@ -1,11 +1,13 @@
-<div class="exercise-container">
-    <p>Exercise {{ exerciseIndex + 1 }}/{{ workout.exercises.length }}</p>
+<div class="exercise-container header">
+    <div class="d-flex">
+      <a href="javascript:history.back()" class="back-btn">←</a>
+      <p>Exercise {{ exerciseIndex + 1 }}/{{ workout.exercises.length }}</p>
+    </div>
     <img [src]="currentExercise.image" alt="Exercise Image" />
     <h2>{{ currentExercise.name }}</h2>
   
     <h1 *ngIf="currentExercise.duration">{{ timer }}</h1>
     <h1 *ngIf="currentExercise.repetitions">x{{ currentExercise.repetitions }}</h1>
-  
     <button class="next-btn" (click)="nextExercise()">Next ➜</button>
   </div>
   

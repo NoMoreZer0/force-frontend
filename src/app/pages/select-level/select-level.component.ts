@@ -44,7 +44,7 @@ export class SelectLevelComponent {
       }
 
       alert('Level selection saved!');
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/confirmation']);
     }
   }
 
