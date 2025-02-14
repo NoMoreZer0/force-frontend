@@ -1,0 +1,27 @@
+<div *ngIf="workout" class="workout-detail">
+    <div class="header" [style.backgroundImage]="'url(' + workout.image + ')'">
+      <button class="back-btn">←</button>
+      <h1>{{ workout.name }}</h1>
+      <p>{{ workout.duration }}</p>
+    </div>
+  
+    <div class="stats">
+      <div class="stat"><span>⭐</span> <p>Saved</p></div>
+      <div class="stat"><span>❤️</span> <p>{{ workout.likes | number }}</p></div>
+      <div class="stat"><span>💬</span> <p>{{ workout.comments }}</p></div>
+    </div>
+  
+    <h2>Exercises</h2>
+    <div class="exercise-list">
+      <div *ngFor="let exercise of workout.exercises" class="exercise-item">
+        <img [src]="exercise.image" [alt]="exercise.name" />
+        <div class="exercise-info">
+          <h3>{{ exercise.name }}</h3>
+          <p>{{ exercise.duration }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <button class="begin-btn">Begin</button>
+  </div>
+  

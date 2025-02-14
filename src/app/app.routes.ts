@@ -10,6 +10,7 @@ import { SelectLevelComponent } from './pages/select-level/select-level.componen
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { MainComponent } from './pages/main/main.component';
 import { AuthGuard } from './guards/app.guard';
+import { WorkoutDetailComponent } from './pages/workout-detail/workout-detail.component';
 
 export const routes: Routes = [
   { path: 'main', component: MainComponent, canActivate: [AuthGuard] },
@@ -22,5 +23,6 @@ export const routes: Routes = [
   { path: 'select-goal', component: SelectGoalComponent },
   { path: 'select-level', component: SelectLevelComponent },
   { path: 'confirmation', component: ConfirmationComponent },
+  { path: 'workout/:id', component: WorkoutDetailComponent },
   { path: '**', redirectTo: 'register' }
 ];

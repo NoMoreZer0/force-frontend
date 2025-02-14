@@ -18,11 +18,14 @@
       <div class="cards">
         <div *ngFor="let workout of workouts" class="card" [ngClass]="{'locked': workout.locked}">
           <!-- Workout Background -->
-          <div class="workout-bg" [style.background-image]="workout.image"></div>
+          <div class="workout-bg" [style.background-image]="'url(' + workout.image + ')'"></div>
           
           <div class="workout-content">
-            <h4>{{ workout.name }}</h4>
-            <p>Week 1 | {{ workout.duration }} min</p>
+            <a [routerLink]="['/workout', workout.id]" *ngFor="let workout of workouts" class="card">
+                <h4>{{ workout.name }}</h4>
+                <p>Week 1 | {{ workout.duration }} min</p>
+            </a>
+              
 
             <!-- Completion & Progress -->
             <div *ngIf="workout.completed" class="status">✔ Completed!</div>
@@ -76,7 +79,7 @@
       <span class="icon">🔍</span>
       <span class="icon">👥</span>
       <span class="icon">➕</span>
-      <img src="assets/images/profile.jpg" class="profile-pic" />
+      <img src="profile.png" class="profile-pic" />
     </div>
   </div>
   

@@ -31,9 +31,9 @@ export class MainComponent {
   loadData() {
     // Example data for workouts
     this.workouts = [
-      { name: 'Chest Training', duration: '8-12', completed: true, progress: 100, locked: false, difficulty: 4, image: 'chest.png' },
-      { name: 'Legs Training', duration: '12-15', completed: false, progress: 20, locked: false, difficulty: 5, image: 'legs.png' },
-      { name: 'Cardio', duration: '20-25', completed: false, locked: true, difficulty: 3, image: 'cardio.png' }
+      { id: 1, name: 'Chest Training', duration: '8-12', completed: true, progress: 100, locked: false, difficulty: 4, image: 'chest.png' },
+      { id: 2, name: 'Legs Training', duration: '12-15', completed: false, progress: 20, locked: false, difficulty: 5, image: 'legs.png' },
+      { id: 3, name: 'Cardio', duration: '20-25', completed: false, locked: true, difficulty: 3, image: 'cardio.png' }
     ];
 
     // Example data for diets
