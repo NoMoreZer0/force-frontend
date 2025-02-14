@@ -1,0 +1,18 @@
+<div class="age-container">
+    <h2 class="title">How old are you?</h2>
+    <p class="subtitle">This helps us create your personalized plan</p>
+  
+    <!-- Age Picker -->
+    <div class="age-picker">
+        <select [(ngModel)]="selectedAge">
+          <option *ngFor="let age of ageOptions" [value]="age">{{ age }}</option>
+        </select>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <button class="back-button" (click)="goBack()">←</button>
+      <button class="next-button" [disabled]="!selectedAge" (click)="confirmAge()">Next →</button>
+    </div>
+  </div>
+  

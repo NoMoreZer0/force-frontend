@@ -1,0 +1,19 @@
+<div class="height-container">
+    <h2 class="title">What’s your height?</h2>
+    <p class="subtitle">You can always change this later</p>
+  
+    <!-- Height Picker -->
+    <div class="height-picker">
+      <select [(ngModel)]="selectedHeight">
+        <option value="" disabled selected>Select your height</option>
+        <option *ngFor="let height of heightOptions" [value]="height">{{ height }} cm</option>
+      </select>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <button class="back-button" (click)="goBack()">←</button>
+      <button class="next-button" [disabled]="!selectedHeight" (click)="confirmHeight()">Next →</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,55 @@
+.height-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3B82F6;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Height Picker */
+  .height-picker select {
+    width: 120px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  /* Navigation Buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .back-button,
+  .next-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    background-color: lightgray;
+  }
+  
+  .next-button {
+    background-color: #3B82F6;
+    color: white;
+  }
+  
+  .next-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  

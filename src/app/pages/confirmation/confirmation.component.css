@@ -1,0 +1,43 @@
+.confirmation-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .illustration {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3B82F6;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation Buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .back-button,
+  .confirm-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    background-color: lightgray;
+  }
+  
+  .confirm-button {
+    background-color: #3B82F6;
+    color: white;
+  }
+  

@@ -1,0 +1,17 @@
+<div class="weight-container">
+    <h2 class="title">What’s your weight?</h2>
+    <p class="subtitle">You can always change this later</p>
+  
+    <!-- Weight Selector -->
+    <div class="weight-picker">
+      <input type="range" min="30" max="200" [(ngModel)]="selectedWeight">
+      <div class="weight-display">{{ selectedWeight }} kg</div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <button class="back-button" (click)="goBack()">←</button>
+      <button class="next-button" [disabled]="!selectedWeight" (click)="confirmWeight()">Next →</button>
+    </div>
+  </div>
+  

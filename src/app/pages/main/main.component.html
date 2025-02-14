@@ -1,0 +1,82 @@
+<div class="main-container">
+    <!-- Tabs -->
+    <div class="tabs">
+      <span (click)="selectTab('workouts')" [class.active]="activeTab === 'workouts'">Workouts</span>
+      <span (click)="selectTab('diet')" [class.active]="activeTab === 'diet'">Diet</span>
+    </div>
+  
+    <!-- Workout Progress -->
+    <div *ngIf="activeTab === 'workouts'" class="workout-section">
+      <div class="workout-progress">
+        <h3>Workout plan: Week 1</h3>
+        <div class="progress-bar">
+          <div [style.width]="workoutProgress + '%'"></div>
+        </div>
+        <span>{{ completedWorkouts }}/{{ totalWorkouts }}</span>
+      </div>
+  
+      <div class="cards">
+        <div *ngFor="let workout of workouts" class="card" [ngClass]="{'locked': workout.locked}">
+          <!-- Workout Background -->
+          <div class="workout-bg" [style.background-image]="workout.image"></div>
+          
+          <div class="workout-content">
+            <h4>{{ workout.name }}</h4>
+            <p>Week 1 | {{ workout.duration }} min</p>
+
+            <!-- Completion & Progress -->
+            <div *ngIf="workout.completed" class="status">✔ Completed!</div>
+            <div *ngIf="!workout.completed && !workout.locked" class="progress">Progress: {{ workout.progress }}%</div>
+            <div *ngIf="workout.locked" class="locked-icon">🔒 Locked</div>
+
+            <!-- Progress Circle -->
+            <div class="progress-circle">
+              <svg width="50" height="50">
+                <circle cx="25" cy="25" r="20" stroke-width="5" stroke="#ddd" fill="none"/>
+                <circle cx="25" cy="25" r="20" stroke-width="5" 
+                        [attr.stroke-dasharray]="workout.progress + ',100'" stroke-linecap="round"
+                        stroke="#3B82F6" fill="none"/>
+              </svg>
+            </div>
+
+            <!-- Difficulty Stars -->
+            <div class="difficulty">
+              <span *ngFor="let star of [1,2,3,4,5]; let i = index">
+                <i class="fa" [class.fa-star]="i < workout.difficulty" [class.fa-star-o]="i >= workout.difficulty"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Diet Progress -->
+    <div *ngIf="activeTab === 'diet'" class="diet-section">
+      <div class="diet-progress">
+        <h3>Diet plan: Week 1</h3>
+        <div class="progress-bar">
+          <div [style.width]="dietProgress + '%'"></div>
+        </div>
+        <span>{{ completedDiets }}/{{ totalDiets }}</span>
+      </div>
+  
+      <div class="cards">
+        <div *ngFor="let diet of diets" class="card">
+          <img [src]="diet.image" alt="{{ diet.name }}" />
+          <h4>{{ diet.name }}</h4>
+          <p>Week 1 | {{ diet.duration }} min</p>
+          <div *ngIf="diet.completed" class="status">✔ Completed!</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <span class="icon">🏠</span>
+      <span class="icon">🔍</span>
+      <span class="icon">👥</span>
+      <span class="icon">➕</span>
+      <img src="assets/images/profile.jpg" class="profile-pic" />
+    </div>
+  </div>
+  

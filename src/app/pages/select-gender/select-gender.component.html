@@ -1,0 +1,21 @@
+<div class="gender-container">
+    <h2 class="title">Tell us about yourself!</h2>
+    <p class="subtitle">To give you a better experience we need to know your gender</p>
+  
+    <div class="gender-options">
+      <div class="gender-option female" (click)="selectGender('Female')">
+        <i class="bi bi-gender-female"></i>
+        <span>Female</span>
+      </div>
+  
+      <div class="gender-option male" (click)="selectGender('Male')">
+        <i class="bi bi-gender-male"></i>
+        <span>Male</span>
+      </div>
+    </div>
+  
+    <button class="next-button" [disabled]="!selectedGender" (click)="confirmGender()">
+      Next →
+    </button>
+  </div>
+  

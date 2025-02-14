@@ -1,0 +1,66 @@
+.level-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3B82F6;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Level Options */
+  .level-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .level-option {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .selected {
+    color: #3B82F6;
+    text-decoration: underline;
+  }
+  
+  /* Navigation Buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .back-button,
+  .next-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    background-color: lightgray;
+  }
+  
+  .next-button {
+    background-color: #3B82F6;
+    color: white;
+  }
+  
+  .next-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  

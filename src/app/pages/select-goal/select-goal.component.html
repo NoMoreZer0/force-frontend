@@ -1,0 +1,30 @@
+<div class="goal-container">
+    <h2 class="title">What’s your goal?</h2>
+    <p class="subtitle">This helps us create your personalized plan</p>
+  
+    <!-- Goal Selection -->
+    <div class="goal-options">
+      <div class="goal-option" [class.selected]="selectedGoal === 'Gain Weight'" (click)="selectGoal('Gain Weight')">
+        Gain Weight
+      </div>
+      <div class="goal-option" [class.selected]="selectedGoal === 'Lose Weight'" (click)="selectGoal('Lose Weight')">
+        Lose Weight
+      </div>
+      <div class="goal-option" [class.selected]="selectedGoal === 'Get Fitter'" (click)="selectGoal('Get Fitter')">
+        Get Fitter
+      </div>
+      <div class="goal-option" [class.selected]="selectedGoal === 'Gain Flexibility'" (click)="selectGoal('Gain Flexibility')">
+        Gain Flexibility
+      </div>
+      <div class="goal-option" [class.selected]="selectedGoal === 'Learn Basics'" (click)="selectGoal('Learn Basics')">
+        Learn Basics
+      </div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <button class="back-button" (click)="goBack()">←</button>
+      <button class="next-button" [disabled]="!selectedGoal" (click)="confirmGoal()">Next →</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,30 @@
+<div class="level-container">
+    <h2 class="title">What’s your level?</h2>
+    <p class="subtitle">This helps us create your personalized plan</p>
+  
+    <!-- Level Selection -->
+    <div class="level-options">
+      <div class="level-option" [class.selected]="selectedLevel === 'Rookie'" (click)="selectLevel('Rookie')">
+        Rookie
+      </div>
+      <div class="level-option" [class.selected]="selectedLevel === 'Beginner'" (click)="selectLevel('Beginner')">
+        Beginner
+      </div>
+      <div class="level-option" [class.selected]="selectedLevel === 'Intermediate'" (click)="selectLevel('Intermediate')">
+        Intermediate
+      </div>
+      <div class="level-option" [class.selected]="selectedLevel === 'Advance'" (click)="selectLevel('Advance')">
+        Advance
+      </div>
+      <div class="level-option" [class.selected]="selectedLevel === 'True Beast'" (click)="selectLevel('True Beast')">
+        True Beast
+      </div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <button class="back-button" (click)="goBack()">←</button>
+      <button class="next-button" [disabled]="!selectedLevel" (click)="confirmLevel()">Next →</button>
+    </div>
+  </div>
+  

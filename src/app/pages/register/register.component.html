@@ -1,0 +1,35 @@
+<div class="register-container">
+    <!-- Back Button -->
+    <button class="back-button" (click)="goBack()">
+      <i class="bi bi-arrow-left"></i>
+    </button>
+  
+    <!-- Logo Section -->
+    <div class="logo-container">
+      <img src="image.png" alt="Force Logo" class="logo">
+      <h2 class="brand-name">FORCE</h2>
+    </div>
+  
+    <!-- Registration Form -->
+    <form class="register-form">
+      <input type="text" name="firstName" [(ngModel)]="firstName" placeholder="First Name" class="input-field">
+      <input type="text" name="lastName" [(ngModel)]="lastName" placeholder="Last Name" class="input-field">
+      <input type="email" name="email" [(ngModel)]="email" placeholder="Email" class="input-field">
+      <input type="password" name="password" [(ngModel)]="password" placeholder="Password" class="input-field">
+      <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirm Password" class="input-field">
+  
+      <!-- Privacy Policy Checkbox -->
+      <div class="checkbox-container">
+        <input type="checkbox" name="termsAccepted" [(ngModel)]="termsAccepted">
+        <label for="terms">
+          By continuing, you accept our <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
+        </label>
+      </div>
+  
+      <!-- Register Button -->
+      <button type="button" class="register-button" (click)="registerUser()">
+        Register
+      </button>
+    </form>
+  </div>
+  
